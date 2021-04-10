@@ -1,0 +1,29 @@
+{% extends 'ItemForm/main.html' %}
+
+{% block content %}
+<h2>Update Item</h2>
+<form class="addItemForm" id="addItemForm" action="#" method="POST">
+    {% csrf_token %}
+    <div class="form-row">
+        <label for="description" class="labelitemText">Item</label>
+        <input type="text" id="description" name="description" value="{{description}}"required>
+    </div>
+    <div class="form-row">
+        <label for="cost" class="labelitemText">Cost: </label>
+        <input type="number" id="cost" name="cost" min="1" step="any" value="{{ cost }}" required>
+    </div>
+    <div class="form-row">
+        <label for="item_type" class="labelitemType">Expense or Income?</label>
+        <input type="radio" id="item_type" name="item_type" value="Expense">
+        <span class="expenseItem">Expense</span>
+        <input type="radio" id="item_type" name="item_type" value="Income">
+        <span class="incomeItem">Income</span>
+    </div>
+    <div class="form-row">
+        <label for="sold_price" class="labelitemText">Sold Price</label>
+        <input type="number" id="sold_price" name="sold_price" min="0" step="any"> 
+    </div>
+
+    <input type="submit" value="Update item" class="newItemButton">
+</form>
+{% endblock %}

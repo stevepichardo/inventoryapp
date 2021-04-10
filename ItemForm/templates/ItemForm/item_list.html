@@ -1,0 +1,59 @@
+{% extends 'ItemForm/main.html' %}
+
+{% block content %}
+    <div class="dashboard_container">
+        <div class="dashboard_row">
+          <div class="card">
+              <div class="total_spent_title">
+                  Total Spent
+              </div>
+              <div class="total_spent_amount">
+                  {{ total_expense }}
+              </div>
+          </div>
+          <div class="card">
+              <div class="total_made_title">
+                  Total Made
+              </div>
+              <div class="total_made_amount">
+                  {{ total_income }}
+              </div>
+          </div>
+          <div class="card">
+              <div class="total_profit_title">
+                  Profit Made
+              </div>
+              <div class="total_profit_amount">
+                  {{ total_profit }}
+              </div>
+          </div>
+          </div>
+      <h2 class="list_title">
+          Current Inventory
+      </h2>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Description</th>
+            <th scope="col">Amount</th>
+            <th scope="col">Resell Value</th>
+            <th scope="col">Profit</th>
+            <th scope="col">action</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+        {% for item in items %}
+            <td>{{ item.description }}</th>
+            <td>{{ item.cost }}</td>
+            <td>{{ item.sold_price }}</td>
+            <td>{{ item.item_profit }}</td>
+            <td><a href="{% url 'ItemForm:update_item' item.id %}" class="btn btn-info">Update</a></td>
+            <td><a href="{% url 'ItemForm:delete_item' item.id %}" class="btn btn-danger">Delete</a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+{% endblock %}

@@ -1,0 +1,119 @@
+.form-row {
+    margin-bottom: 1.5em;
+}
+
+label {
+    margin-bottom: .25em;
+}
+
+h2 {
+    text-align: center;
+}
+
+.addItemForm {
+    border: 1px solid grey;
+    max-width: 30em;
+    margin: 0 auto;
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.labelitemText, .labelitemType, .itemDate {
+    display: block;
+}
+
+
+input[type="radio" i] {
+    margin-right: .5em;
+}
+
+input[type="text" i], input[type="date" i] {
+    width: 100%;
+}
+
+input[type="submit" i] {
+    width: 100%;
+    background-color: #32B4E5;
+    border-radius: 5px;
+    border: 1px solid grey;
+} */
+
+.expenseItem {
+    margin-right: .5em;
+}
+
+.dashboard_container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.dashboard_row {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid grey;
+}
+
+.card {
+    border: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    margin: .5em;
+    width: 250px;
+    height: 6em;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.total_spent_title, .total_made_title, .total_profit_title {
+    padding: .5rem;
+}
+
+.total_spent_amount,.total_made_amount,.total_profit_amount {
+    padding-bottom: 3rem;
+}
+
+.total_spent_title {
+    background: #FF8E72;
+}
+
+.total_made_title {
+    background: #377771;
+}
+
+.total_profit_title {
+    background: #4CE0B3;
+}
+
+.total_spent_amount {
+    color: #FF8E72;
+}
+
+.total_made_amount {
+    color: #377771;
+}
+
+.total_profit_amount {
+    color: #4CE0B3;
+}
+
+.inventory_list {
+    padding: 0;
+}
+
+.inventory_list_items {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background: #006989;
+    color: #f8f8f8;
+    font-size: 1.5rem;
+    padding: .5em;
+}
